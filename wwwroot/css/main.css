@@ -1,0 +1,15 @@
+﻿body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: auto;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+    width: 150px;
+    Display: inline-block;
+}
+
+h1 {
+    color: mediumpurple;
+}
