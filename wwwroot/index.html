@@ -6,49 +6,76 @@
 <head>
     <meta charset="utf-8" />
     <link href="css/main.css" rel="stylesheet" />
+    <!--Title-->
     <title>Logan Hardy: Assignment 1</title>
+    <!--Icon for browser tab-->
+    <link rel="icon" type="img/png" href="../img/letterH.png">
 
 </head>
 <body>
-    <h1>Logan Hardy</h1>
+    <!--Preferred name-->
+    <h1 class="centerText">Logan Hardy</h1>
+    <br />
+    <p class="centerText">I love having fun with my kids!</p>
+    <!--Image of me doing something I love-->
+    <img src="../img/IMG-1018.jpg" />
+    <br />
+    <!--Paragraph of what I expect to get out of this class-->
+    <p>
+        With IS 403: Enterprise Application Development, I hope to gain a greater understanding on web applications, both front and back end.
+        I also haven't had any previous experience with Visual Studio, so I'm excited to become more familiar with it before I enter the workforce.
+        I hope that we will have an opportunity to design websites to be mobile friendly as well, and maybe design an actual application that could be downloaded from an app store.
+    </p>
 
-    <p>With IS 403: Enterprise Application Development, I hope to gain a greater understanding on web applications, both front and back end.  
-       I also haven't had any previous experience with Visual Studio, so I'm excited to become more familiar with it before I enter the workforce. 
-       I hope that we will have an opportunity to design websites to be mobile friendly as well, and maybe design an actual application that could be downloaded from an app store</p>
-
+    <!--Top Three Jobs I'm Interested in After Graduation-->
+    <div class="topJobs">
+        <p>Top Three Jobs I'm Interested in After Graduation</p>
+        <ul id="topJobs">
+            <li>Data Scientist</li>
+            <li>Data Analyst</li>
+            <li>Database Administrator</li>
+        </ul>
+    </div>
+    <br />
     <br />
 
-    <p>Top Three Jobs I'm Interested in After Graduation</p>
-    <ul id="topJobs">
-        <li>Data Scientist</li>
-        <li>Data Analyst</li>
-        <li>Database Administrator</li>
-    </ul>
+    <!--Grade Calculator-->
+    <div class="gradeCalculatorBox">
+        <h2>Grade Calculator</h2>
+        <p>(Please enter grades as a percentage.  Do not include percent sign (%).</p>
 
-    <h2>Grade Calculator</h2>
-    <p>(Please enter grades as a percentage of area.  Do not include percent sign (%).</p>
-    <form>
-        <label>Assignments: </label>
-        <input value="90" id="assignments" />%
-        <br />
-        <label>Group Project: </label>
-        <input value="80" id="groupProject" />%
-        <br />
-        <label>Quizzes: </label>
-        <input value="65" id="quizzes" />%
-        <br />
-        <label>Exams: </label>
-        <input value="100" id="exams" />%
-        <br />
-        <label>INTEX: </label>
-        <input value="100" id="intex" />%
-        <br />
-        <br />
-        <input type="submit" value="Calculate" id="submitButton" />
-    </form>
+        <form>
+            <label>Assignments: </label>
+            <input class="grades" placeholder="90" id="assignments" />%
+            <br />
+            <label>Group Project: </label>
+            <input class="grades" placeholder="93" id="groupProject" />%
+            <br />
+            <label>Quizzes: </label>
+            <input class="grades" placeholder="95" id="quizzes" />%
+            <br />
+            <label>Exams: </label>
+            <input class="grades" placeholder="85" id="exams" />%
+            <br />
+            <label>INTEX: </label>
+            <input class="grades" placeholder="87" id="intex" />%
+            <br />
+            <br />
+            <input type="button" value="Calculate" id="submitButton" />
+        </form>
 
+        <br />
+        <br />
 
+        <!--Grade calculator output-->
+        <h3>Final Grade: </h3>
+        <h4 id="outputGrade"></h4>
+        <br />
+        <br />
+        <br />
+        <br />
 
+    </div>
     <script src="../js/gradeCalculator.js"></script>
 </body>
 </html>
