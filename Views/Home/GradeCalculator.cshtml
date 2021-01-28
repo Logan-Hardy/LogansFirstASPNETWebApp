@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Grade Calculator";
+    ViewBag.Nav1 = "Home";
+    ViewBag.Nav2 = "Grade Calculator";
+}
+
+@model LogansFirstASPNETWebApp.Models.GradeCalculatorModel
+
+<body>
+
+    <!--Grade Calculator-->
+    <div class="gradeCalculatorBox">
+        <h1>@ViewBag.Title</h1>
+        <p>(Please enter grades as a percentage.  Do not include percent sign (%).</p>
+        
+        <form asp-controller="Home" asp-action="GradeCalculator" method="post">
+
+            <label>Name: </label>
+            <input id="Name" asp-for="Name" />
+            <br />
+            <br />
+            <label>Assignments: </label>
+            <input class="grades" id="Assignments" asp-for="Assignments" />%
+            <br />
+            <label>Group Project: </label>
+            <input class="grades" id="GroupProject" asp-for="GroupProject" />%
+            <br />
+            <label>Quizzes: </label>
+            <input class="grades" id="Quizzes" asp-for="Quizzes" />%
+            <br />
+            <label>Exams: </label>
+            <input class="grades" id="Exams" asp-for="Exams" />%
+            <br />
+            <label>INTEX: </label>
+            <input class="grades" id="Intex" asp-for="Intex" />%
+            <br />
+            <br />
+            <input type="submit" value="Calculate" id="submitButton" />
+            <div asp-validation-summary="All"></div>
+
+        </form>
+
+
+    </div>
+</body>

@@ -1,42 +1,26 @@
 ﻿//Add event listener for when user clicks on the submit button
-var submit = document.getElementById("submitButton");
-submit.addEventListener("click", function () {
+$("#submitButton").click( function () {
     //Call function to calculate grade
-    caluclateGrade ();
-})
+    caluclateGrade();
+});
 
 function caluclateGrade() {
     //Define grade categories and assign values accordingly from user
-    var assignments = document.getElementById("assignments").value;
-    var groupProject = document.getElementById("groupProject").value;
-    var quizzes = document.getElementById("quizzes").value;
-    var exams = document.getElementById("exams").value;
-    var intex = document.getElementById("intex").value;
+    var Name = $("#Name").val();
+    var Assignments = $("#Assignments").val();
+    var GroupProject = $("#GroupProject").val();
+    var Quizzes = $("#Quizzes").val();
+    var Exams = $("#Exams").val();
+    var Intex = $("#Intex").val();
 
     //Define and initialize final grade info
     var finalGrade = 0.00;
     var finalLetterGrade = "";
     var gradeOutput = "";
 
-    //If category was left blank, default to ZERO (0)
-    if (assignments == "") {
-        assignments = 0;
-    }
-    if (groupProject == "") {
-        groupProject = 0;
-    }
-    if (quizzes == "") {
-        quizzes = 0;
-    }
-    if (exams == "") {
-        exams = 0;
-    }
-    if (intex == "") {
-        intex = 0;
-    }
 
     //Determine final grade percentage
-    finalGrade = (assignments * 0.50) + (groupProject * 0.10) + (quizzes * 0.10) + (exams * 0.20) + (intex * 0.10);
+    finalGrade = (Assignments * 0.50) + (GroupProject * 0.10) + (Quizzes * 0.10) + (Exams * 0.20) + (Intex * 0.10);
     finalGrade = finalGrade.toFixed(2)
 
     //Determine letter grade based off final grade percentage
@@ -78,6 +62,6 @@ function caluclateGrade() {
     }
 
     //Display final grade
-    gradeOutput = (finalLetterGrade + " : " + finalGrade + "%");
-    document.getElementById("outputGrade").innerHTML = gradeOutput;
+    gradeOutput = (Name + " received a " + finalLetterGrade + " : " + finalGrade + "% in IS 413");
+    alert(gradeOutput);
 }
